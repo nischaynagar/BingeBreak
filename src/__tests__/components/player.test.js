@@ -3,11 +3,11 @@ import { render, fireEvent } from '@testing-library/react';
 import { Player } from '../../components';
 
 describe('<Player />', () => {
-  it('renders the <Player /> with a bunny video', () => {
+  it('renders the <Player /> with a discolights video', () => {
     const { container, getByText, queryByTestId } = render(
       <Player>
         <Player.Button />
-        <Player.Video src="/videos/bunny.mp4" />
+        <Player.Video src="/videos/discolights.mp4" />
       </Player>
     );
 
