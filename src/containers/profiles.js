@@ -8,7 +8,7 @@ export function SelectProfileContainer({ user, setProfile }) {
     <>
       <Header bg={false}>
         <Header.Frame>
-          <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
+          <Header.Logo to={ROUTES.HOME} src={logo} alt="BingeBreak" />
         </Header.Frame>
       </Header>
 
@@ -16,7 +16,12 @@ export function SelectProfileContainer({ user, setProfile }) {
         <Profiles.Title>Who's watching?</Profiles.Title>
         <Profiles.List>
           <Profiles.User
-            onClick={() => setProfile({ displayName: user.displayName, photoURL: user.photoURL })}
+            onClick={() =>
+              setProfile({
+                displayName: user.displayName,
+                photoURL: user.photoURL,
+              })
+            }
             data-testid="user-profile"
           >
             <Profiles.Picture src={user.photoURL} />
